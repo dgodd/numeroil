@@ -91,7 +91,7 @@ func main() {
 	})
 	defer db.Close()
 
-	top := " <html> <head> <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> <style>body{font-family: 'Poiret One', cursive;font-size:30px;background:linen;text-align:center;margin:100px 0;}</style> </head><body> <form action='/word'> <label for='q'>Word</label> <input name='q' autofocus> <input type='submit'> </form><br><br>"
+	top := " <html> <head>  <script ='//cdnjs.cloudflare.com/ajax/libs/turbolinks/1.3.0/turbolinks.min.js'></script><link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'> <style>body{font-family: 'Poiret One', cursive;font-size:30px;background:linen;text-align:center;margin:100px 0;}</style> </head><body> <form action='/word'> <label for='q'>Word</label> <input name='q' autofocus> <input type='submit'> </form><br><br>"
 	bottom := "</body></html>"
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
